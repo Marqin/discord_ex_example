@@ -1,24 +1,32 @@
 # DiscordExExample
 
-**TODO: Add description**
+Example bot written with [DiscordEx](https://github.com/rmcafee/discord_ex).
 
-## Installation
+## Usage
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+### Quick start
 
-  1. Add `discord_ex_example` to your list of dependencies in `mix.exs`:
+```
+git clone https://github.com/marqin/discord_ex_example/
+cd discord_ex_example
+export DISCORD_BOT_TOKEN="PUT_HERE_YOUR_SECRET_TOKEN_FROM_DISCORD"
+mix deps.get
+iex -S mix
+```
 
-    ```elixir
-    def deps do
-      [{:discord_ex_example, "~> 0.1.0"}]
-    end
-    ```
+And your bot will be running.
 
-  2. Ensure `discord_ex_example` is started before your application:
+If you don't want to use system shell variables for token, you can also
+configure it in `config/secret.exs` (more info on that is in comment in
+`config/config.exs`).
 
-    ```elixir
-    def application do
-      [applications: [:discord_ex_example]]
-    end
-    ```
+### More to read
 
+* [How to register your bot and add it to server?](https://discordapp.com/developers/docs/topics/oauth2)
+* [Discord API docs](https://discordapp.com/developers/docs/intro)
+* [DiscordEx docs](https://hexdocs.pm/discord_ex/)
+
+### Bonus
+
+If you are in `iex -S mix` you can type `recompile()` and your bot code will
+be hot-swaped without disconnecting bot.
