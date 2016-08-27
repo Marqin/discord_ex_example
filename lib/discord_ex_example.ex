@@ -9,7 +9,10 @@ defmodule DiscordExExample do
     # Define workers and child supervisors to be supervised
     children = [
       # Starts a worker by calling: DiscordExExample.Worker.start_link(arg1, arg2, arg3)
-      # worker(DiscordExExample.Worker, [arg1, arg2, arg3]),
+      worker(DiscordExExample.Worker, [%{
+        handler: DiscordExExample.Worker,
+        token: Application.get_env(:discord_ex_example, :token)
+      }]),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
