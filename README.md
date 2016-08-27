@@ -30,3 +30,6 @@ configure it in `config/secret.exs` (more info on that is in comment in
 
 If you are in `iex -S mix` you can type `recompile()` and your bot code will
 be hot-swaped without disconnecting bot.
+
+Base of this project was generated with command:
+`mix new discord_ex_example --sup`
