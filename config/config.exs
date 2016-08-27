@@ -2,6 +2,24 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
+############################# DiscordEx Example ###############################
+
+# this is to supress warnings when you don't have "goon" installed
+config :porcelain, goon_warn_if_missing: false
+
+# use system env variable for bot Token
+config :discord_ex_example, token: System.get_env("DISCORD_BOT_TOKEN")
+
+# set bot command prefix
+config :discord_ex_example, cmd_prefix: "."
+
+# you can also config :token in gitignored "secret.exs"
+# import_config "secret.exs"
+
+# REMEMBER TO ADD secret.exs TO .gitignore OR YOUR ACCOUNT MAY GOT COMPROMISED!
+
+###############################################################################
+
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
 # file won't be loaded nor affect the parent project. For this reason,
